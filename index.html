@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .callback-form {
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+    }
+    .callback-form h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .callback-form p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .callback-form a button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .callback-form a button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      .callback-form h2 {
+        font-size: 1.5em;
+      }
+      .callback-form p {
+        font-size: 1em;
+      }
+      .callback-form a button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      header p {
+        font-size: 0.9em;
+      }
+      .callback-form h2 {
+        font-size: 1.2em;
+      }
+      .callback-form p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Our Company</h1>
+  <p>Your success is our mission</p>
+</header>
+
+<section class="gallery">
+  <img src="https://via.placeholder.com/600x400" alt="Company Image 1">
+  <img src="https://via.placeholder.com/600x400" alt="Company Image 2">
+  <img src="https://via.placeholder.com/600x400" alt="Company Image 3">
+  <img src="https://via.placeholder.com/600x400" alt="Company Image 4">
+</section>
+
+<section class="callback-form">
+  <h2>Request a Callback</h2>
+  <p>Fill out the form, and we will contact you shortly.</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScEiTRG3DtESTBBJbJp1vaavZ86hEhvDO3f3IcfjySy39K22g/viewform" target="_blank">
+    <button>Fill Out the Form</button>
+  </a>
+</section>
+
+<footer>
+  <p>&copy; 2024 Your Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
