@@ -9,17 +9,20 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      background-image: url('YOUR_IMAGE_URL'); /* Set the background image URL here */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
     }
     header {
       text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: #fff;
+      padding: 40px;
+      background-color: rgba(0, 0, 0); 
     }
     header h1 {
-      font-size: 2.5em;
+      font-size: 3em;
       margin: 0;
+       /* Orange color */
     }
     header p {
       font-size: 1.2em;
@@ -40,9 +43,11 @@
       transform: scale(1.05);
     }
     .callback-form {
-      background-color: #f9f9f9;
-      padding: 20px;
+      background-color: rgba(0, 0, 0); /* Dark background for form */
+      padding: 40px;
       text-align: center;
+      margin-top: 20px;
+      border-radius: 10px;
     }
     .callback-form h2 {
       font-size: 2em;
@@ -51,28 +56,30 @@
     .callback-form p {
       font-size: 1.2em;
       margin-bottom: 20px;
+      color: #ccc; /* Light gray text */
     }
     .callback-form a button {
-      padding: 10px 20px;
-      background-color: #007BFF;
+      padding: 12px 24px;
+      background-color: #FF6600; /* Orange button */
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 1.1em;
     }
     .callback-form a button:hover {
-      background-color: #0056b3;
+      background-color: #e65c00; /* Darker orange on hover */
     }
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #333;
+      padding: 15px;
+      background-color: greyg; 
       color: #fff;
-      margin-top: 20px;
+      margin-top: 30px;
     }
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
       }
       header p {
         font-size: 1em;
@@ -86,20 +93,6 @@
       .callback-form a button {
         width: 100%;
         max-width: 300px;
-      }
-    }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5em;
-      }
-      header p {
-        font-size: 0.9em;
-      }
-      .callback-form h2 {
-        font-size: 1.2em;
-      }
-      .callback-form p {
-        font-size: 0.9em;
       }
     }
   </style>
