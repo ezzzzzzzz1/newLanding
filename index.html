@@ -9,23 +9,20 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('YOUR_IMAGE_URL'); /* Set the background image URL here */
-      background-size: cover;
-      background-position: center;
+      background-color: #42424c;
       color: #fff;
     }
-    header {
+    .head {
       text-align: center;
       padding: 40px;
-      background-color: rgba(0, 0, 0); 
+      background-color: #42424c;
     }
-    header h1 {
-      font-size: 3em;
+    .head h1 {
+      font-size: 4.8em;
       margin: 0;
-       /* Orange color */
     }
-    header p {
-      font-size: 1.2em;
+    .head p {
+      font-size: 1.8em;
     }
     .gallery {
       display: grid;
@@ -43,7 +40,7 @@
       transform: scale(1.05);
     }
     .callback-form {
-      background-color: rgba(0, 0, 0); /* Dark background for form */
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 40px;
       text-align: center;
       margin-top: 20px;
@@ -51,29 +48,56 @@
     }
     .callback-form h2 {
       font-size: 2em;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .callback-form p {
       font-size: 1.2em;
-      margin-bottom: 20px;
-      color: #ccc; /* Light gray text */
+      margin-bottom: 30px;
+      color: #ccc;
     }
-    .callback-form a button {
-      padding: 12px 24px;
-      background-color: #FF6600; /* Orange button */
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #d88511;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       font-size: 1.1em;
     }
-    .callback-form a button:hover {
-      background-color: #e65c00; /* Darker orange on hover */
+    .form-container button:hover {
+      background-color: #2c2c2c;
+    }
+    #pdf-container a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #d88511;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+    #pdf-container a:hover {
+      background-color: #2c2c2c;
     }
     footer {
       text-align: center;
       padding: 15px;
-      background-color: greyg; 
+      background-color: black;
       color: #fff;
       margin-top: 30px;
     }
@@ -90,19 +114,84 @@
       .callback-form p {
         font-size: 1em;
       }
-      .callback-form a button {
-        width: 100%;
-        max-width: 300px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center; /* Vertically center the logo */
+      justify-content: flex-start; /* Align the logo to the left */
+      padding: 10px; /* Optional padding around the logo */
+    }
+    
+    .logo {
+      max-width: 100px; /* Adjust the size of the logo */
+      height: auto;
+      border-radius: 10px; /* Optional: rounded corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+      transition: transform 0.3s ease-in-out; /* Hover animation */
+    }
+    
+    .logo:hover {
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+    
+    
+    @media (max-width: 768px) {
+      .logo {
+        max-width: 80px; /* Even smaller size on small screens */
       }
     }
+    
+    
   </style>
-</head>
-<body>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    (function () {
+      emailjs.init("JKVnE42HMZ85FMlyD"); // Replace with your User ID from EmailJS
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<header>
-  <h1>Welcome to Our Company</h1>
-  <p>Your success is our mission</p>
-</header>
+</head>
+
+<body>
+  
+  <header style="background-color: #fff; padding: 10px 20px; font-family: Arial, sans-serif; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; border-bottom: 1px solid #ddd;">
+    <!-- Left Section -->
+      <img src="logo.PNG" alt="Company Logo" class="logo">
+    
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <a href="mailto:info@elbarkaa.com" style="color: #d88511; text-decoration: none; font-size: 1em; display: flex; align-items: center;">
+        <i class="fa fa-envelope" style="margin-right: 5px;"></i> info@elbarkaa.com
+      </a>
+      <a href="tel:01000298884" style="color: #d88511; text-decoration: none; font-size: 1em; display: flex; align-items: center;">
+        <i class="fa fa-phone" style="margin-right: 5px;"></i> 01000298884
+      </a>
+      <a href="tel:01008169514" style="color: #d88511; text-decoration: none; font-size: 1em; display: flex; align-items: center;">
+        <i class="fa fa-phone" style="margin-right: 5px;"></i> 01008169514
+      </a>
+      <a href="tel:01121038949" style="color: #d88511; text-decoration: none; font-size: 1em; display: flex; align-items: center;">
+        <i class="fa fa-phone" style="margin-right: 5px;"></i> 01121038949
+      </a>
+    </div>
+  
+    <!-- Right Section -->
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <div style="color: #d88511; font-size: 1em; display: flex; align-items: center;">
+        <i class="fa fa-map-marker" style="color: #d88511; margin-right: 5px; "></i> 6th of October City - City Stars - B3 - 5th Floor
+      </div>
+      <a href="#" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-facebook"></i></a>
+      <a href="#" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-whatsapp"></i></a>
+      <a href="#" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-instagram"></i></a>
+    </div>
+  </header>
+  
+  
+<div class="head">
+  
+  <h1>Find Your Best Property</h1>
+  <p>Best prices and services</p>
+</div>
 
 <section class="gallery">
   <img src="https://via.placeholder.com/600x400" alt="Company Image 1">
@@ -112,16 +201,80 @@
 </section>
 
 <section class="callback-form">
-  <h2>Request a Callback</h2>
-  <p>Fill out the form, and we will contact you shortly.</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScEiTRG3DtESTBBJbJp1vaavZ86hEhvDO3f3IcfjySy39K22g/viewform" target="_blank">
-    <button>Fill Out the Form</button>
-  </a>
+  <h2>"More Details, More Savings!"</h2>
+  <p>Get access to in-depth information and an exclusive discount by completing the form below.  </p>
+
+  <div class="form-container">
+    <form id="accessForm">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="text" id="phone" placeholder="Enter your phone number" required>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="message-container" style="display: none; margin-top: 20px; text-align: center; font-size: 1.2em;"></div>
+
+  </div>
+
+  <!-- PDF Access Section -->
+  <div id="pdf-container" style="display: none; margin-top: 20px;">
+    <h2>Download Your PDF:</h2>
+    <a href="MohamedEzzCV (3).pdf" download="MohamedEzzCV (3).pdf">
+      Click here to download the PDF
+    </a>
+  </div>
 </section>
 
 <footer>
-  <p>&copy; 2024 Your Company. All rights reserved.</p>
+  <h4>&copy; Elbaraka ©2024 All Copyrights reserved Power By Paymac.net  <h4>
 </footer>
+
+
+<script>
+  document.getElementById("accessForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const messageContainer = document.getElementById("message-container");
+
+    if (name && email && phone) {
+      // Send email using EmailJS
+      emailjs
+        .send("service_i4vli88", "template_q6djc7b", {
+          from_name: name, // Send name
+          from_email: email, // Send email
+          phone: phone, // Send phone number
+        })
+        .then(
+          function () {
+            // Show success message
+            messageContainer.style.display = "block";
+            messageContainer.style.color = "green"; // Success color
+            messageContainer.innerHTML = "Form submitted successfully! You can now download the PDF.";
+            
+            // Display the PDF download section
+            document.getElementById("pdf-container").style.display = "block";
+            document.getElementById("accessForm").reset();
+          },
+          function (error) {
+            // Show error message
+            messageContainer.style.display = "block";
+            messageContainer.style.color = "red"; // Error color
+            messageContainer.innerHTML = "Failed to send the form. Please try again.";
+            console.error(error);
+          }
+        );
+    } else {
+      // Show validation message
+      messageContainer.style.display = "block";
+      messageContainer.style.color = "orange"; // Warning color
+      messageContainer.innerHTML = "Please fill out all fields.";
+    }
+  });
+</script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
