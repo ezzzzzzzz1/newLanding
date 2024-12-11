@@ -11,34 +11,43 @@
       padding: 0;
       background-color: #42424c;
       color: #fff;
+      line-height: 1.6;
     }
+  
     .head {
       text-align: center;
       padding: 40px;
       background-color: #42424c;
     }
+  
     .head h1 {
-      font-size: 4.8em;
+      font-size: 3em;
       margin: 0;
     }
+  
     .head p {
-      font-size: 1.8em;
+      font-size: 1.2em;
+      margin: 10px 0;
     }
+  
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 10px;
+      gap: 15px;
       padding: 20px;
     }
+  
     .gallery img {
       width: 100%;
       height: auto;
       border-radius: 8px;
       transition: transform 0.3s;
     }
+  
     .gallery img:hover {
       transform: scale(1.05);
     }
+  
     .callback-form {
       background-color: rgba(0, 0, 0, 0.8);
       padding: 40px;
@@ -46,41 +55,46 @@
       margin-top: 20px;
       border-radius: 10px;
     }
+  
     .callback-form h2 {
       font-size: 2em;
       margin-bottom: 20px;
     }
+  
     .callback-form p {
       font-size: 1.2em;
       margin-bottom: 30px;
       color: #ccc;
     }
+  
     .form-container {
       max-width: 400px;
       margin: 0 auto;
-      text-align: left;
     }
-    .form-container input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1em;
-    }
+  
+    .form-container input,
     .form-container button {
       width: 100%;
       padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+  
+    .form-container input {
+      border: 1px solid #ccc;
+    }
+  
+    .form-container button {
       background-color: #d88511;
       color: white;
       border: none;
-      border-radius: 5px;
       cursor: pointer;
-      font-size: 1.1em;
     }
+  
     .form-container button:hover {
       background-color: #2c2c2c;
     }
+  
     #pdf-container a {
       display: inline-block;
       padding: 12px 24px;
@@ -91,9 +105,11 @@
       font-size: 1.1em;
       margin-top: 20px;
     }
+  
     #pdf-container a:hover {
       background-color: #2c2c2c;
     }
+  
     footer {
       text-align: center;
       padding: 15px;
@@ -101,48 +117,70 @@
       color: #fff;
       margin-top: 30px;
     }
+  
+    header {
+      background-color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .logo {
+      max-width: 80px;
+      height: auto;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+  
+    .logo:hover {
+      transform: scale(1.1);
+    }
+  
     @media (max-width: 768px) {
-      header h1 {
+      .head h1 {
         font-size: 2.5em;
       }
-      header p {
+  
+      .head p {
         font-size: 1em;
       }
+  
       .callback-form h2 {
         font-size: 1.5em;
       }
+  
       .callback-form p {
         font-size: 1em;
       }
-    }
-    .logo-container {
-      display: flex;
-      align-items: center; /* Vertically center the logo */
-      justify-content: flex-start; /* Align the logo to the left */
-      padding: 10px; /* Optional padding around the logo */
-    }
-    
-    .logo {
-      max-width: 100px; /* Adjust the size of the logo */
-      height: auto;
-      border-radius: 10px; /* Optional: rounded corners */
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-      transition: transform 0.3s ease-in-out; /* Hover animation */
-    }
-    
-    .logo:hover {
-      transform: scale(1.1); /* Slight zoom effect on hover */
-    }
-    
-    
-    @media (max-width: 768px) {
+  
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+  
       .logo {
-        max-width: 80px; /* Even smaller size on small screens */
+        max-width: 60px;
+      }
+  
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       }
     }
-    
-    
+  
+    @media (max-width: 480px) {
+      .head h1 {
+        font-size: 2em;
+      }
+  
+      .head p {
+        font-size: 0.9em;
+      }
+    }
   </style>
+  
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     // Initialize EmailJS
