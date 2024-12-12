@@ -11,20 +11,31 @@
       padding: 0;
       background-color: #42424c;
       color: #fff;
+
     }
     .head {
       text-align: center;
       padding: 40px;
       background-color: #42424c;
+      border-radius: 10px; /* Optional for a rounded header */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
     }
     .head h1 {
-      font-size: 2.8em;
-      margin: 0;
+      font-size: 3rem; /* Large and bold title */
+    font-weight: 700; /* Bold font for emphasis */
+    margin-bottom: 20px; /* Spacing below the title */
+    color: #FFD700; /* Gold color for a premium feel */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow for text depth */
     }
     .head p {
-      font-size: 1.5em;
-    }
+      font-size: 1.4rem; /* Readable text for the description */
+      font-weight: 300; /* Lighter font for the description */
+      line-height: 1.8; /* Increased line-height for readability */
+      color: #F0F0F0; /* Light gray for better contrast */
+      max-width: 800px; /* Restrict width for better readability */
+      margin: 0 auto; /* Center-align description */    }
     .gallery {
+      background-color: #ac6f19;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 10px;
@@ -40,21 +51,32 @@
       transform: scale(1.05);
     }
     .callback-form {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 40px;
-      text-align: center;
-      margin-top: 20px;
-      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0, 0, 139, 0.9), rgba(66, 66, 76, 0.8)); /* Dark blue gradient */
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Depth effect */
+    color: #fff; /* White text for good contrast */
+    font-family: 'Poppins', Arial, sans-serif;
     }
     .callback-form h3 {
-      font-size: 1.3em;
-      margin-bottom: 20px;
+      font-size: 1.8rem; /* Clear and noticeable titles */
+    font-weight: 700; /* Bold for emphasis */
+    color: #FFD700; /* Gold for a premium feel */
+    margin-bottom: 10px;
     }
     .callback-form p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      color: #ccc;
+      font-size: 1.2rem; /* Readable size */
+    line-height: 1.6; /* Improved line spacing for readability */
+    color: #F0F0F0; /* Soft gray for readability */
+    margin: 10px 0;
     }
+    .callback-form p span {
+      font-weight: 700; /* Bold for emphasis */
+      color: #FFD700; /* Gold for key highlights */
+    }
+    
     .form-container {
       max-width: 400px;
       margin: 0 auto;
@@ -97,7 +119,7 @@
     footer {
       text-align: center;
       padding: 15px;
-      background-color: black;
+      background-color: #00008B;
       color: #fff;
       margin-top: 30px;
     }
@@ -110,17 +132,24 @@
       }
       
       .callback-form p {
-        font-size: 1em;
+        font-size: 1.5em;
       }
     }
     .logo-container {
-      display: flex;
-      align-items: center; /* Vertically center the logo */
-      justify-content: flex-start; /* Align the logo to the left */
-      padding: 10px; /* Optional padding around the logo */
+      background-color: #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
     }
     
+    .logo-container img {
+      max-width: 100px;
+      height: auto;
+    }
     .logo {
+      background-color: #ccc;
       max-width: 100px; /* Adjust the size of the logo */
       height: auto;
       border-radius: 10px; /* Optional: rounded corners */
@@ -194,8 +223,9 @@
 
 <body>
   
+
   <header style="
-  background-color: #fff; 
+  background-color: #00008B; 
   padding: 10px 20px; 
   font-family: Arial, sans-serif; 
   display: flex; 
@@ -204,10 +234,13 @@
   flex-wrap: wrap; 
   border-bottom: 1px solid #ddd;
 ">
+
   <!-- Left Section -->
   <div style="flex: 1; min-width: 200px; display: flex; align-items: center; gap: 15px;">
-    <img src="logo.PNG" alt="Company Logo" style="max-width: 100px; height: auto;">
-    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <div class="logo-container">
+      <img src="logo.PNG" alt="Company Logo">
+    </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
       <a href="mailto:info@elbarkaa.com" style="color: #d88511; text-decoration: none; font-size: 0.9em; display: flex; align-items: center;">
         <i class="fa fa-envelope" style="margin-right: 5px;"></i> info@elbarkaa.com
       </a>
@@ -229,17 +262,17 @@
       <i class="fa fa-map-marker" style="margin-right: 5px;"></i> 
       6th of October City - City Stars - B3 - 5th Floor
     </div>
-    <a href="#" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-facebook"></i></a>
-    <a href="#" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-whatsapp"></i></a>
-    <a href="#" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-instagram"></i></a>
+    <a href="https://web.facebook.com/ElbarakaDevvlopment/" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-facebook"></i></a>
+    <a href="wa.me/201159696335" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/elbarakarealestate?igsh=OGxieHVlNjJ2Z295" style="color: #d88511; font-size: 1.5em; text-decoration: none;"><i class="fa fa-instagram"></i></a>
   </div>
 </header>
   
   
 <div class="head">
   
-  <h1>Find Your Best Property</h1>
-  <p>Best prices and services</p>
+  <h1>Mall A1</h1>
+  <p>هيضمنلك اكبر عائد استثماري يصل الى 120,000 مع عرض خاص على سعر المتر Mall A1</p>
 </div>
 
 <section class="gallery">
@@ -249,8 +282,10 @@
 </section>
 
 <section class="callback-form">
-  <h3>"More Details, More Savings!"</h3>
-  <p>Get access to in-depth information and an exclusive discount by completing the form below.  </p>
+  <h3> احصل على هديتك, pdfحمل ال</h3>
+  <h3>Description:</h3>
+  <p>هدية outdoorسعر المتر في الدور الأرضي : 110,000  + مساحة ال</p>
+  <p>سعر المتر في الدور الاول : 69,000 بدلا من 75,000 لفترة محدودة</p>
 
   <div class="form-container">
     <form id="accessForm">
