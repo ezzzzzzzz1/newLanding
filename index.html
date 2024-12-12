@@ -230,7 +230,20 @@
       border-radius: 5px;
       flex: 1; /* The input takes up the remaining space */
     }
-    
+    /* Ensure responsiveness */
+@media (max-width: 768px) {
+  .responsive-paragraph {
+    font-size: 1em; /* Adjust font size for smaller screens */
+    padding: 10px; /* Reduce padding on small devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-paragraph {
+    font-size: 0.9em; /* Further reduce font size for very small screens */
+    padding: 8px; /* Compact padding */
+  }
+}
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
@@ -314,9 +327,8 @@
 
 <section class="callback-form">
   <h3> احصل على هديتك, pdfحمل ال</h3>
-  <p class="responsive-paragraph"> هدية outdoorسعر المتر في الدور الأرضي : 100,000 جنيه + مساحة ال</p>
+  <p>سعر المتر في الدور الارضي : 110,000 + مساحة الاوت دور هدية</p>
   <p>
-
     سعر المتر في الدور الاول : 69,000 جنيه بدلا من 75,000 جنيه لفترة محدودة</p>
   <div class="form-container">
     <form id="accessForm">
