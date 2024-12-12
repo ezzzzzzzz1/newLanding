@@ -206,6 +206,30 @@
       }
     }
     
+    .phone-input-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Spacing between dropdown and input */
+      margin: 10px 0;
+    }
+    
+    #country_code {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      color: #333;
+      flex: 0 0 150px; /* Fixed width for the dropdown */
+    }
+    
+    #phone {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      flex: 1; /* The input takes up the remaining space */
+    }
     
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -298,8 +322,16 @@
     <form id="accessForm">
       <input type="text" id="name" placeholder="Enter your name" required>
       <input type="email" id="email" placeholder="Enter your email" required>
-      <input type="text" id="phone" placeholder="Enter your phone number" required>
-      <button type="submit">Submit</button>
+      <div class="phone-input-container">
+        <select id="country_code" required>
+          <option value="+964">Iraq (+964)</option>
+          <option value="+965">Kuwait (+965)</option>
+          <option value="+20" selected>Egypt (+20)</option>
+          <option value="+966">Saudi Arabia (+966)</option>
+        </select>
+        <input type="text" id="phone" placeholder="Enter your phone number" required>
+      </div>
+            <button type="submit">Submit</button>
     </form>
     <div id="message-container" style="display: none; margin-top: 20px; text-align: center; font-size: 1.2em;"></div>
 
@@ -320,21 +352,26 @@
 
 
 <script>
+  
   document.getElementById("accessForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
+    const countryCode = document.getElementById("country_code").value;
+
     const messageContainer = document.getElementById("message-container");
 
-    if (name && email && phone) {
+    if (name && email && phone && countryCode) {
       // Send email using EmailJS
       emailjs
         .send("service_i4vli88", "template_q6djc7b", {
           from_name: name, // Send name
           from_email: email, // Send email
-          phone: phone, // Send phone number
+          phone: phone, // Send full phone number with country code
+          countrycode: countryCode,
+          
         })
         .then(
           function () {
@@ -362,6 +399,13 @@
       messageContainer.innerHTML = "Please fill out all fields.";
     }
   });
+  const countryCodeSelect = document.getElementById("country_code");
+const phoneInput = document.getElementById("phone");
+
+countryCodeSelect.addEventListener("change", () => {
+  phoneInput.placeholder = `Enter your phone number (${countryCodeSelect.value})`;
+});
+
 </script>
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
